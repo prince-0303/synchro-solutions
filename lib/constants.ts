@@ -11,9 +11,9 @@ export const CONTACT_INFO = {
 };
 
 export const SOCIAL_LINKS = {
-  linkedin: "https://linkedin.com/company/synchrosolutions", // [PLACEHOLDER]
-  twitter: "https://twitter.com/synchrosolutions", // [PLACEHOLDER]
-  github: "https://github.com/synchrosolutions", // [PLACEHOLDER]
+  linkedin: "#", // [PLACEHOLDER] — add LinkedIn URL when account is created
+  twitter: "#", // [PLACEHOLDER] — add X/Twitter URL when account is created
+  github: "#",  // [PLACEHOLDER] — add GitHub URL when account is created
 };
 
 export const NAV_LINKS = [
