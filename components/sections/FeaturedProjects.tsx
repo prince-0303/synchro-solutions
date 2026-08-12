@@ -1,4 +1,4 @@
-"use client";
+
 
 import { PROJECTS } from "@/content/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";

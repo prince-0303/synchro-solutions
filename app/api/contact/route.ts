@@ -13,6 +13,7 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (error) {
+    console.error("Failed to submit form:", error);
     return NextResponse.json(
       { error: "Error submitting form" },
       { status: 500 }

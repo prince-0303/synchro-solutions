@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { 
   Code2, 
   Database, 
@@ -34,6 +34,7 @@ const TECH_STACK = [
 ];
 
 export function TechStackStrip() {
+  const prefersReducedMotion = useReducedMotion();
   // Double the array to create a seamless loop
   const duplicatedTech = [...TECH_STACK, ...TECH_STACK];
 
@@ -49,7 +50,7 @@ export function TechStackStrip() {
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
         <motion.div
-          animate={{ x: ["0%", "-50%"] }}
+          animate={prefersReducedMotion ? {} : { x: ["0%", "-50%"] }}
           transition={{
             ease: "linear",
             duration: 30,

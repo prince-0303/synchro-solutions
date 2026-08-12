@@ -32,10 +32,10 @@ export function About() {
             
             <SlideUp className="space-y-4 text-muted text-lg text-balance">
               <p>
-                Synchro Solutions was founded on a simple premise: great software shouldn't be constrained by technical debt or bloated processes. We are a team of engineers, designers, and strategists who believe in building products that work flawlessly and scale effortlessly.
+                Synchro Solutions was founded on a simple premise: great software shouldn&apos;t be constrained by technical debt or bloated processes. We are a team of engineers, designers, and strategists who believe in building products that work flawlessly and scale effortlessly.
               </p>
               <p>
-                Whether you're a startup looking for an MVP or an enterprise needing a complex system overhaul, we bring a pragmatic, engineering-first approach to every challenge. No buzzwords, just solid architecture and beautiful design.
+                Whether you&apos;re a startup looking for an MVP or an enterprise needing a complex system overhaul, we bring a pragmatic, engineering-first approach to every challenge. No buzzwords, just solid architecture and beautiful design.
               </p>
             </SlideUp>
           </StaggerContainer>

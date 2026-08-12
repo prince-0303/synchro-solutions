@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Navbar } from "./Navbar";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeToggle } from "./ThemeToggle";
@@ -27,7 +28,7 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
-        <a href="#home" className="flex items-center shrink-0">
+        <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/images/logo/logo.png"
             alt={`${SITE_CONFIG.name} Logo`}
@@ -36,7 +37,7 @@ export function Header() {
             className="w-12 h-12 md:w-16 md:h-16 object-contain"
             priority
           />
-        </a>
+        </Link>
 
         <div className="flex items-center space-x-4 md:space-x-8">
           <Navbar />

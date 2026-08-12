@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StaggerContainer, SlideUp } from "@/components/motion";
 import { Button } from "@/components/ui/Button";
 import { CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -72,56 +72,56 @@ export function Contact() {
           <div className="space-y-10">
             <SlideUp className="space-y-4">
               <div className="text-brand font-semibold tracking-wider text-sm uppercase">Get in touch</div>
-              <SectionHeading>Let's build together.</SectionHeading>
+              <SectionHeading>Let&apos;s build together.</SectionHeading>
               <p className="text-muted text-lg max-w-md">
-                Tell us about your project, your timeline, and your goals. We'll get back to you within 24 hours.
+                Tell us about your project, your timeline, and your goals. We&apos;ll get back to you within 24 hours.
               </p>
             </SlideUp>
 
             <SlideUp className="space-y-6 pt-4">
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-alt-bg flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-brand" />
+                <div className="w-10 h-10 flex flex-col items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-foreground" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email us</h4>
-                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-muted hover:text-brand transition-colors">
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-muted hover:text-brand transition-colors text-sm">
                     {CONTACT_INFO.email}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-alt-bg flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-brand" />
+                <div className="w-10 h-10 flex flex-col items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-foreground" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Call us</h4>
-                  <a href={`tel:${CONTACT_INFO.phone}`} className="text-muted hover:text-brand transition-colors">
+                  <a href={`tel:${CONTACT_INFO.phone?.replace(/ /g, '')}`} className="text-muted hover:text-brand transition-colors text-sm">
                     {CONTACT_INFO.phone}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-alt-bg flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-brand" />
+                <div className="w-10 h-10 flex flex-col items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-foreground" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Visit us</h4>
-                  <p className="text-muted">{CONTACT_INFO.address}</p>
+                  <p className="text-muted text-sm">{CONTACT_INFO.address}</p>
                 </div>
               </div>
             </SlideUp>
 
-            <SlideUp className="pt-8 border-t border-border flex space-x-4">
-              <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-alt-bg flex items-center justify-center text-muted hover:text-brand hover:bg-brand/10 transition-colors" aria-label="Twitter">
+            <SlideUp className="pt-8 border-t border-border flex space-x-6">
+              <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-brand transition-colors" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-alt-bg flex items-center justify-center text-muted hover:text-brand hover:bg-brand/10 transition-colors" aria-label="LinkedIn">
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-brand transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-alt-bg flex items-center justify-center text-muted hover:text-brand hover:bg-brand/10 transition-colors" aria-label="GitHub">
+              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-brand transition-colors" aria-label="GitHub">
                 <Github className="w-5 h-5" />
               </a>
             </SlideUp>
@@ -208,7 +208,7 @@ export function Contact() {
 
                 {isSuccess && (
                   <p className="text-center text-sm text-green-500 font-medium">
-                    Message sent successfully! We'll be in touch soon.
+                    Message sent successfully! We&apos;ll be in touch soon.
                   </p>
                 )}
               </form>

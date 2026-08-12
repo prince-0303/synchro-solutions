@@ -1,9 +1,10 @@
-"use client";
+
 
 import { SERVICES } from "@/content/services";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StaggerContainer, SlideUp } from "@/components/motion";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export function ServicesOverview() {
   return (
@@ -26,27 +27,29 @@ export function ServicesOverview() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service) => (
             <SlideUp key={service.id} className="h-full">
-              <div className="group relative h-full rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-                {/* Hover Gradient Border effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-brand-hover/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-lg bg-alt-bg flex items-center justify-center mb-6 group-hover:scale-110 group-hover:text-brand transition-all">
-                    <service.icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted mb-6 text-sm">{service.description}</p>
+              <Link href={`/services/${service.id}`} className="block h-full">
+                <div className="group relative h-full rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                  {/* Hover Gradient Border effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-brand-hover/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-foreground/80">
-                        <Check className="w-4 h-4 text-brand mr-2 shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-alt-bg flex items-center justify-center mb-6 group-hover:scale-110 group-hover:text-brand transition-all">
+                      <service.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                    <p className="text-muted mb-6 text-sm">{service.description}</p>
+                    
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-foreground/80">
+                          <Check className="w-4 h-4 text-brand mr-2 shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </SlideUp>
           ))}
         </StaggerContainer>

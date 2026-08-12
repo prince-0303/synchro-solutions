@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, Variants } from "framer-motion";
 
 export function ScrollReveal({ 
   children, 
@@ -9,7 +9,7 @@ export function ScrollReveal({
 }: { 
   children: React.ReactNode; 
   className?: string;
-  variants: any; // using any for simplicity, can type properly later
+  variants: Variants;
 }) {
   const shouldReduceMotion = useReducedMotion();
 

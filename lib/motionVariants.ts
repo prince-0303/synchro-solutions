@@ -1,9 +1,9 @@
 import { Variants } from "framer-motion";
 
 export const duration = {
-  fast: 0.2,
-  base: 0.4,
-  slow: 0.8,
+  fast: 0.35,
+  base: 0.65,
+  slow: 1.0,
 };
 
 export const easing = {
@@ -11,7 +11,7 @@ export const easing = {
 };
 
 export const stagger = {
-  children: 0.08,
+  children: 0.12,
 };
 
 export const fadeIn: Variants = {

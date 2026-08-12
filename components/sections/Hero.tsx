@@ -72,7 +72,7 @@ function InteractiveMockup() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.7 }}
             className="text-2xl font-mono font-bold text-foreground"
           >
             +42.8%
@@ -86,7 +86,7 @@ function InteractiveMockup() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.9 }}
             className="text-2xl font-mono font-bold text-brand"
           >
             99.99%
@@ -110,7 +110,7 @@ function InteractiveMockup() {
             strokeWidth="2"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 2.0, delay: 1.1, ease: "easeInOut" }}
           />
           
           {/* Accent glow */}
@@ -122,7 +122,7 @@ function InteractiveMockup() {
             className="opacity-20 blur-sm"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 2.0, delay: 1.1, ease: "easeInOut" }}
           />
         </svg>
       </div>
@@ -140,17 +140,6 @@ function InteractiveMockup() {
 }
 
 export function Hero() {
-  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const elem = document.getElementById("contact");
-    if (elem) elem.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleScrollToWork = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const elem = document.getElementById("services");
-    if (elem) elem.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section id="home" className="relative min-h-screen pt-32 pb-20 flex items-center scroll-mt-16">
@@ -173,16 +162,16 @@ export function Hero() {
 
             <SlideUp>
               <p className="text-lg md:text-xl text-muted text-balance max-w-xl">
-                We're a specialized software agency building high-performance web, mobile, and SaaS applications for modern startups and enterprises.
+                We&apos;re a specialized software development company building custom web applications, mobile applications, SaaS products, AI solutions, UI/UX experiences, and cloud solutions for startups and businesses.
               </p>
             </SlideUp>
 
             <SlideUp className="pt-4 flex flex-col sm:flex-row gap-4">
-              <Button href="#contact" onClick={handleScrollToContact} size="lg" className="w-full sm:w-auto text-base">
-                Let's Build Together
+              <Button href="/contact" size="lg" className="w-full sm:w-auto text-base">
+                Let&apos;s Build Together
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button href="#services" onClick={handleScrollToWork} variant="outline" size="lg" className="w-full sm:w-auto text-base">
+              <Button href="/services" variant="outline" size="lg" className="w-full sm:w-auto text-base">
                 See Our Work
               </Button>
             </SlideUp>

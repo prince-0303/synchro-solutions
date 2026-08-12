@@ -1,24 +1,25 @@
 export const SITE_CONFIG = {
   name: "Synchro Solutions",
-  description: "We build the backend your product actually needs.",
-  url: "https://synchrosolutions.com", // [PLACEHOLDER]
+  description: "Synchro Solutions builds custom web, mobile, SaaS and AI solutions for startups and businesses. We design and develop digital products built to scale.",
+  url: "https://synchrosolutions.com",
 };
 
 export const CONTACT_INFO = {
-  email: "synchrosolutions.dev@gmail.com", // [PLACEHOLDER]
-  phone: "+91 9876543212", // [PLACEHOLDER]
-  address: "123 Tech Lane, Suite 400, San Francisco, CA 94105", // [PLACEHOLDER]
+  email: "synchrosolutions.dev@gmail.com",
+  phone: "+91 9876543212",
+  address: "Kochi, Kerala",
 };
 
 export const SOCIAL_LINKS = {
-  linkedin: "#", // [PLACEHOLDER] — add LinkedIn URL when account is created
-  twitter: "#", // [PLACEHOLDER] — add X/Twitter URL when account is created
-  github: "#",  // [PLACEHOLDER] — add GitHub URL when account is created
+  twitter: "https://twitter.com",
+  linkedin: "https://linkedin.com",
+  github: "https://github.com",
 };
 
 export const NAV_LINKS = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];

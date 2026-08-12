@@ -1,4 +1,4 @@
-"use client";
+
 
 import { STATS } from "@/content/stats";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";

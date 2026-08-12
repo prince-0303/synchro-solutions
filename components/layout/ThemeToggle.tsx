@@ -6,11 +6,12 @@ import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 export function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timer);
   }, []);
 
   if (!mounted) {
@@ -22,7 +23,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative flex items-center justify-center w-9 h-9 rounded-md hover:bg-alt-bg text-foreground transition-colors focus:outline-none"
+      className="relative flex items-center justify-center w-9 h-9 rounded-md hover:bg-alt-bg text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
       aria-label="Toggle theme"
     >
       <motion.div

@@ -1,4 +1,4 @@
-"use client";
+
 
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -6,12 +6,6 @@ import { FadeIn } from "@/components/motion";
 import { ArrowRight } from "lucide-react";
 
 export function CTABanner() {
-  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const elem = document.getElementById("contact");
-    if (elem) elem.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Decorative gradient blob */}
@@ -21,10 +15,10 @@ export function CTABanner() {
         <FadeIn className="space-y-8 bg-card/50 backdrop-blur-2xl border border-border/50 p-8 md:p-16 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10">
           <SectionHeading>Ready to build something remarkable?</SectionHeading>
           <p className="text-xl text-muted text-balance mx-auto max-w-2xl">
-            Let's turn your complex problem into an elegant, scalable solution. We're ready when you are.
+            Let&apos;s turn your complex problem into an elegant, scalable solution. We&apos;re ready when you are.
           </p>
           <div className="pt-4">
-            <Button href="#contact" onClick={handleScrollToContact} size="lg" className="text-lg px-10">
+            <Button href="/contact" size="lg" className="text-lg px-10">
               Start a Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
