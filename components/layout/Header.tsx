@@ -23,18 +23,18 @@ export function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm py-1 md:py-2"
-          : "bg-transparent py-2 md:py-3"
+          ? "bg-background/80 backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src="/images/logo/logo.png"
+            src="/images/logo/Synchro.png"
             alt={`${SITE_CONFIG.name} Logo`}
-            width={64}
-            height={64}
-            className="w-12 h-12 md:w-16 md:h-16 object-contain"
+            width={300}
+            height={100}
+            className="w-auto h-12 md:h-16 object-contain"
             priority
           />
         </Link>
