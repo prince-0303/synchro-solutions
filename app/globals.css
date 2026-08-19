@@ -78,3 +78,10 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Hide default cursor on desktop since we use CustomCursor */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
