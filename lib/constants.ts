@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
 export const CONTACT_INFO = {
   email: "synchrosolutions.dev@gmail.com",
   phone: "+91 9876543212",
-  address: "Kochi, Kerala",
+  address: "Kochi",
 };
 
 export const SOCIAL_LINKS = {

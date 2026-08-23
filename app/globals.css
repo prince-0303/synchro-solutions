@@ -85,3 +85,18 @@
     cursor: none !important;
   }
 }
+
+/* Smooth theme transitions for safe elements */
+body, 
+.bg-card, 
+.bg-background, 
+.bg-background-secondary,
+.bg-alt-bg,
+.text-foreground,
+.text-muted,
+.text-brand,
+.border-border {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease-out;
+  transition-duration: 200ms;
+}

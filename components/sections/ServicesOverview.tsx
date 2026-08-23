@@ -15,7 +15,7 @@ export function ServicesOverview() {
             <div className="text-brand font-semibold tracking-wider text-sm uppercase">Our Expertise</div>
           </SlideUp>
           <SlideUp>
-            <SectionHeading>Every layer of your stack, covered.</SectionHeading>
+            <SectionHeading><span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-teal)] via-[var(--brand-cyan)] to-[var(--brand-blue)] drop-shadow-sm">Every layer</span> of your stack, covered.</SectionHeading>
           </SlideUp>
           <SlideUp>
             <p className="text-muted text-lg text-balance">

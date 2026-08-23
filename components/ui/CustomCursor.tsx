@@ -27,9 +27,13 @@ export function CustomCursor() {
     const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     if (!mediaQuery.matches) return;
 
-    setIsVisible(true);
+    let hasMoved = false;
 
     const onMouseMove = (e: MouseEvent) => {
+      if (!hasMoved) {
+        setIsVisible(true);
+        hasMoved = true;
+      }
       rawX.set(e.clientX);
       rawY.set(e.clientY);
     };

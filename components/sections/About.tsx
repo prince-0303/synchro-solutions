@@ -26,7 +26,7 @@ export function About() {
             <SlideUp>
               <div className="text-brand font-semibold tracking-wider text-sm uppercase mb-2">About Us</div>
               <SectionHeading>
-                We build the backend your product actually needs.
+                We build the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-teal)] via-[var(--brand-cyan)] to-[var(--brand-blue)] drop-shadow-sm">backend</span> your product actually needs.
               </SectionHeading>
             </SlideUp>
             
@@ -50,7 +50,7 @@ export function About() {
             />
             
             <div className="space-y-8 sm:space-y-12">
-              {STEPS.map((step, idx) => (
+              {STEPS.map((step) => (
                 <FadeIn key={step.id} className="relative flex items-start group" /* transition delay based on idx can be added */>
                   <div className="flex-shrink-0 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-card border-2 border-border group-hover:border-brand transition-colors duration-300 mr-6">
                     <step.icon className="w-6 h-6 text-muted group-hover:text-brand transition-colors duration-300" />

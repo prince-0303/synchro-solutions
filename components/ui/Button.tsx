@@ -33,7 +33,7 @@ const getStyles = (
 
   const variants = {
     primary:
-      "[background-color:#0F9D95] hover:[background-color:#13B8AD] text-white shadow-[0_2px_12px_rgba(15,157,149,0.35)] hover:shadow-[0_4px_20px_rgba(15,157,149,0.5)] transition-all",
+      "bg-gradient-to-r from-[#0F9D95] to-[#2dd4bf] hover:from-[#13B8AD] hover:to-[#5eead4] text-white shadow-[0_2px_12px_rgba(15,157,149,0.35)] hover:shadow-[0_4px_20px_rgba(15,157,149,0.5)] transition-all",
     ghost: "hover:bg-alt-bg/50 text-foreground transition-all",
     outline:
       "border border-border dark:border-white/25 bg-white/60 dark:bg-transparent backdrop-blur-md hover:bg-brand/5 dark:hover:bg-white/5 text-foreground shadow-sm hover:shadow-md hover:border-brand/40 dark:hover:border-brand/50 transition-all",
