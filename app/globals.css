@@ -20,13 +20,13 @@
 
 @layer base {
   :root {
-    --background: #F8FCFC;
-    --background-secondary: #F3F9FB;
-    --foreground: #071A20;
-    --muted: #527078;
-    --border: rgba(15, 157, 149, 0.15);
-    --card: rgba(255, 255, 255, 0.7);
-    --alt-bg: rgba(234, 247, 247, 0.5);
+    --background: #F1F5F9;
+    --background-secondary: #E2E8F0;
+    --foreground: #0F172A;
+    --muted: #475569;
+    --border: rgba(15, 23, 42, 0.1);
+    --card: rgba(255, 255, 255, 0.85);
+    --alt-bg: rgba(241, 245, 249, 0.7);
     --brand: #0F9D95;
     --brand-hover: #13B8AD;
     --brand-teal: #0F9D95;
