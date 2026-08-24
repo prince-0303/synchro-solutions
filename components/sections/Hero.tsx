@@ -3,10 +3,12 @@
 import { Button } from "@/components/ui/Button";
 import { FadeIn, StaggerContainer, SlideUp } from "@/components/motion";
 import { Code, BarChart3, Database, Check } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 
 export function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section
       id="home"
@@ -65,7 +67,7 @@ export function Hero() {
         <div className="relative w-full h-[180px] mt-16 perspective-[1000px] hidden md:block">
           <FadeIn className="absolute left-[10%] top-4">
             <motion.div
-              animate={{ y: [0, -10, 0] }}
+              animate={prefersReducedMotion ? {} : { y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="px-6 py-4 rounded-2xl border border-border bg-card/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-4 text-left w-fit"
             >
@@ -81,7 +83,7 @@ export function Hero() {
 
           <FadeIn className="absolute right-[5%] top-0">
             <motion.div
-              animate={{ y: [0, 10, 0] }}
+              animate={prefersReducedMotion ? {} : { y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
               className="px-6 py-4 rounded-2xl border border-border bg-card/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-4 text-left w-fit"
             >
@@ -97,7 +99,7 @@ export function Hero() {
 
           <FadeIn className="absolute left-[35%] bottom-5">
             <motion.div
-              animate={{ y: [0, -8, 0] }}
+              animate={prefersReducedMotion ? {} : { y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
               className="px-6 py-4 rounded-2xl border border-border bg-card/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-4 text-left w-fit"
             >

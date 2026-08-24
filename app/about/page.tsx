@@ -2,10 +2,18 @@ import { About } from "@/components/sections/About";
 import { CTABanner } from "@/components/sections/CTABanner";
 
 export const metadata = {
-  title: "About Us | Synchro Solutions",
+  title: "About Us",
   description: "Learn about Synchro Solutions. We are a team of engineers, designers, and strategists building scalable software products without the technical debt.",
-  alternates: { canonical: "/about" },
-  openGraph: { title: "About Us | Synchro Solutions", description: "Learn about Synchro Solutions. We are a team of engineers, designers, and strategists building scalable software products without the technical debt." },
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us",
+    description: "Learn about Synchro Solutions. We are a team of engineers, designers, and strategists building scalable software products without the technical debt.",
+    url: "/about",
+    siteName: "Synchro Solutions",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {

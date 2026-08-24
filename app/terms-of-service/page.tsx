@@ -1,6 +1,16 @@
 export const metadata = {
-  title: "Terms of Service | Synchro Solutions",
-  description: "Terms of Service for Synchro Solutions.",
+  title: "Terms of Service",
+  description: "Terms of Service for Synchro Solutions. Read our terms and conditions.",
+  alternates: {
+    canonical: "/terms-of-service",
+  },
+  openGraph: {
+    title: "Terms of Service",
+    description: "Terms of Service for Synchro Solutions. Read our terms and conditions.",
+    url: "/terms-of-service",
+    siteName: "Synchro Solutions",
+    type: "website",
+  },
 };
 
 export default function TermsOfServicePage() {

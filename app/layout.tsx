@@ -67,6 +67,12 @@ export default function RootLayout({
         "name": SITE_CONFIG.name,
         "url": SITE_CONFIG.url,
         "logo": `${SITE_CONFIG.url}/images/logo/logo.png`,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kochi",
+          "addressRegion": "Kerala"
+        },
+        "sameAs": []
       },
       {
         "@type": "WebSite",

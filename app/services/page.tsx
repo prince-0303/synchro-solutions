@@ -2,10 +2,18 @@ import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { CTABanner } from "@/components/sections/CTABanner";
 
 export const metadata = {
-  title: "Our Services | Custom Software Development | Synchro Solutions",
+  title: "Our Services | Custom Software Development",
   description: "Explore our range of custom software development services including web apps, mobile apps, SaaS, AI solutions, UI/UX, and cloud infrastructure.",
-  alternates: { canonical: "/services" },
-  openGraph: { title: "Our Services | Synchro Solutions", description: "Explore our range of custom software development services including web apps, mobile apps, SaaS, AI solutions, UI/UX, and cloud infrastructure." },
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Our Services | Custom Software Development",
+    description: "Explore our range of custom software development services including web apps, mobile apps, SaaS, AI solutions, UI/UX, and cloud infrastructure.",
+    url: "/services",
+    siteName: "Synchro Solutions",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {

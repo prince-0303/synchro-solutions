@@ -52,19 +52,19 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-sm text-muted hover:text-brand transition-colors">
+                <a href={SOCIAL_LINKS.instagram || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-sm text-muted hover:text-brand transition-colors">
                   <Instagram className="w-5 h-5" />
                   <span>Instagram</span>
                 </a>
               </li>
               <li>
-                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-sm text-muted hover:text-brand transition-colors">
+                <a href={SOCIAL_LINKS.whatsapp || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-sm text-muted hover:text-brand transition-colors">
                   <WhatsApp className="w-5 h-5" />
                   <span>WhatsApp</span>
                 </a>
               </li>
               <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-sm text-muted hover:text-brand transition-colors">
+                <a href={SOCIAL_LINKS.facebook || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-sm text-muted hover:text-brand transition-colors">
                   <Facebook className="w-5 h-5" />
                   <span>Facebook</span>
                 </a>

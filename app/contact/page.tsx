@@ -1,10 +1,18 @@
 import { Contact } from "@/components/sections/Contact";
 
 export const metadata = {
-  title: "Contact Us | Synchro Solutions",
+  title: "Contact Us",
   description: "Get in touch with Synchro Solutions. Tell us about your project, timeline, and goals.",
-  alternates: { canonical: "/contact" },
-  openGraph: { title: "Contact Us | Synchro Solutions", description: "Get in touch with Synchro Solutions. Tell us about your project, timeline, and goals." },
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Us",
+    description: "Get in touch with Synchro Solutions. Tell us about your project, timeline, and goals.",
+    url: "/contact",
+    siteName: "Synchro Solutions",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {

@@ -1,6 +1,18 @@
+import { CONTACT_INFO } from "@/lib/constants";
+
 export const metadata = {
-  title: "Privacy Policy | Synchro Solutions",
-  description: "Privacy Policy for Synchro Solutions.",
+  title: "Privacy Policy",
+  description: "Privacy Policy for Synchro Solutions. Learn how we collect, use, and protect your data.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy",
+    description: "Privacy Policy for Synchro Solutions. Learn how we collect, use, and protect your data.",
+    url: "/privacy-policy",
+    siteName: "Synchro Solutions",
+    type: "website",
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -26,7 +38,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Contact Us</h2>
         <p className="mb-6">
-          For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at hello@synchrosolutions.com.
+          For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at <a href={`mailto:${CONTACT_INFO.email}`}>{CONTACT_INFO.email}</a>.
         </p>
       </div>
     </div>

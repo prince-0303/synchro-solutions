@@ -2,10 +2,18 @@ import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { CTABanner } from "@/components/sections/CTABanner";
 
 export const metadata = {
-  title: "Our Portfolio | Synchro Solutions",
+  title: "Our Portfolio",
   description: "Explore our recent work. We partner with ambitious teams to turn complex problems into elegant, scalable solutions.",
-  alternates: { canonical: "/portfolio" },
-  openGraph: { title: "Our Portfolio | Synchro Solutions", description: "Explore our recent work. We partner with ambitious teams to turn complex problems into elegant, scalable solutions." },
+  alternates: {
+    canonical: "/portfolio",
+  },
+  openGraph: {
+    title: "Our Portfolio",
+    description: "Explore our recent work. We partner with ambitious teams to turn complex problems into elegant, scalable solutions.",
+    url: "/portfolio",
+    siteName: "Synchro Solutions",
+    type: "website",
+  },
 };
 
 export default function PortfolioPage() {
