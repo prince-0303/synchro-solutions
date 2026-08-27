@@ -16,7 +16,7 @@ export const SOCIAL_LINKS = {
   github: "https://github.com",
   instagram: "https://www.instagram.com/synchro.solutions/",
   whatsapp: "https://wa.me/919746036517",
-  facebook: "https://facebook.com",
+  facebook: "https://facebook.com/synchro.solution",
 };
 
 export const NAV_LINKS = [
