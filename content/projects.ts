@@ -1,25 +1,54 @@
 export const PROJECTS = [
   {
-    id: "project-1",
-    title: "Enterprise Logistics Dashboard",
-    description: "A comprehensive dashboard for real-time fleet tracking and logistics management.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
-    link: "https://github.com",
+    id: "school-erp",
+    title: "School Management ERP",
+    label: "ERP Prototype",
+    description: "A school management system designed to centralize academic and administrative workflows into one platform.",
+    images: [
+      "/images/projects/school-erp/dashboard.png",
+      "/images/projects/school-erp/attendance.png",
+      "/images/projects/school-erp/fees.png"
+    ],
+    features: [
+      "Student Management",
+      "Staff Management",
+      "Attendance Tracking",
+      "Fees Management"
+    ],
+    link: "/portfolio/school-erp"
   },
   {
-    id: "project-2",
-    title: "Fintech Mobile Wallet",
-    description: "A secure and intuitive mobile wallet application for seamless financial transactions.",
-    techStack: ["React Native", "Node.js", "PostgreSQL"],
-    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    link: "https://github.com",
-  },
-  {
-    id: "project-3",
-    title: "Healthcare Booking Portal",
-    description: "An accessible web portal for patients to easily schedule and manage appointments.",
-    techStack: ["React", "Express", "MongoDB"],
-    imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-  },
+    id: "ez-stay",
+    title: "Ez-Stay",
+    label: "Rental Accommodation Platform",
+    description: "A digital rental platform designed to simplify property discovery, listing management, verification and rental workflows.",
+    images: [
+      "/images/projects/ez-stay/home.png", // Public homepage
+      "/images/projects/ez-stay/booking.png", // How to book listings
+      "/images/projects/ez-stay/admin.png" // Admin dashboard
+    ],
+    publicFeatures: [
+      "Property discovery",
+      "Search by location",
+      "Property type filtering",
+      "Budget filtering",
+      "Property browsing",
+      "Property review/details",
+      "Lister communication",
+      "Rental/move-in workflow"
+    ],
+    adminFeatures: [
+      "User management",
+      "Lister management",
+      "KYC management",
+      "Earnings",
+      "Occupancy",
+      "Platform analytics",
+      "User growth analytics",
+      "KYC status monitoring"
+    ],
+    caseStudyHeadline: "From Property Discovery to Platform Management",
+    caseStudyDescription: "Ez-Stay combines a user-facing rental discovery experience with an administrative platform for managing users, property listers, verification, occupancy and platform activity.",
+    link: "/portfolio/ez-stay"
+  }
 ];

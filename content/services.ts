@@ -1,46 +1,50 @@
-import { Code2, Smartphone, Cloud, PenTool, BrainCircuit, Server } from "lucide-react";
+import { Globe, LayoutDashboard, Cog } from "lucide-react";
 
 export const SERVICES = [
   {
-    id: "web-development",
-    title: "Web Development",
-    description: "High-performance web applications built for scale.",
-    icon: Code2,
-    features: ["Next.js & React", "Custom Backends", "API Integration", "Performance Optimization"],
+    id: "business-websites",
+    title: "Business Websites",
+    description: "Professional, fast and modern websites designed to build trust, showcase your business and generate enquiries.",
+    icon: Globe,
+    features: [
+      "Business websites",
+      "Landing pages",
+      "E-commerce",
+      "Website redesign",
+      "WhatsApp/enquiry integration"
+    ],
+    cta: "Build Your Website"
   },
   {
-    id: "mobile-app-development",
-    title: "Mobile App Development",
-    description: "Native-feeling cross-platform mobile experiences.",
-    icon: Smartphone,
-    features: ["React Native", "Flutter", "iOS & Android", "App Store Deployment"],
+    id: "business-management",
+    title: "Business Management Software",
+    description: "Replace spreadsheets and manual processes with software designed around the way your business actually works.",
+    icon: LayoutDashboard,
+    features: [
+      "CRM",
+      "Inventory management",
+      "Billing",
+      "Customer management",
+      "Employee management",
+      "Dashboards & Reports",
+      "Business automation"
+    ],
+    cta: "Automate Your Business"
   },
   {
-    id: "saas-development",
-    title: "SaaS Development",
-    description: "End-to-end development for your software as a service.",
-    icon: Server,
-    features: ["Multi-tenant Architectures", "Subscription Billing", "User Management", "Analytics Dashboards"],
-  },
-  {
-    id: "ui-ux-design",
-    title: "UI/UX Design",
-    description: "Intuitive, beautiful interfaces that convert.",
-    icon: PenTool,
-    features: ["Wireframing", "Prototyping", "Design Systems", "User Testing"],
-  },
-  {
-    id: "ai-solutions",
-    title: "AI Solutions",
-    description: "Integrate intelligence into your existing products.",
-    icon: BrainCircuit,
-    features: ["LLM Integration", "Custom Workflows", "Data Processing", "Chatbots"],
-  },
-  {
-    id: "cloud-solutions",
-    title: "Cloud Solutions",
-    description: "Scalable, secure, and reliable infrastructure.",
-    icon: Cloud,
-    features: ["AWS / GCP / Azure", "Serverless", "Database Architecture", "DevOps"],
-  },
+    id: "erp-custom",
+    title: "ERP & Custom Software",
+    description: "When your business has unique requirements, we build software around your exact workflows, processes and goals.",
+    icon: Cog,
+    features: [
+      "ERP systems",
+      "School management systems",
+      "Rental/property management",
+      "Custom dashboards",
+      "SaaS platforms",
+      "Custom business applications"
+    ],
+    cta: "Discuss Your Requirement"
+  }
 ];
+

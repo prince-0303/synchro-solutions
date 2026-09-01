@@ -1,70 +1,68 @@
 "use client";
 
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { FadeIn, StaggerContainer, SlideUp } from "@/components/motion";
-import { Search, PenTool, Rocket } from "lucide-react";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { cn } from "@/lib/utils";
+import { StaggerContainer, SlideUp } from "@/components/motion";
+import { Settings, MessageSquare, Zap, MapPin, TrendingUp } from "lucide-react";
 
-const STEPS = [
-  { id: 1, title: "Discovery", icon: Search, desc: "We align on your goals and technical requirements." },
-  { id: 2, title: "Build", icon: PenTool, desc: "Iterative, high-quality development sprints." },
-  { id: 3, title: "Launch", icon: Rocket, desc: "Deploy, scale, and maintain with confidence." },
+const REASONS = [
+  {
+    title: "BUILT AROUND YOUR BUSINESS",
+    desc: "We don't force your workflow into a generic system. We design around your requirements.",
+    icon: Settings
+  },
+  {
+    title: "DIRECT COMMUNICATION",
+    desc: "Work directly with the team building your solution.",
+    icon: MessageSquare
+  },
+  {
+    title: "MODERN TECHNOLOGY",
+    desc: "Fast, maintainable and scalable solutions using modern development technologies.",
+    icon: Zap
+  },
+  {
+    title: "LOCAL SUPPORT",
+    desc: "Based in Kerala and available to work closely with businesses across the state.",
+    icon: MapPin
+  },
+  {
+    title: "BUILT TO GROW",
+    desc: "Start with what you need today and expand your system as your business grows.",
+    icon: TrendingUp
+  }
 ];
 
 export function About() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-
   return (
-    <section id="about" className="py-24 scroll-mt-16 relative">
+    <section id="about" className="py-24 scroll-mt-16 relative bg-background">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          <StaggerContainer className="space-y-6">
-            <SlideUp>
-              <div className="text-brand font-semibold tracking-wider text-sm uppercase mb-2">About Us</div>
-              <SectionHeading>
-                We build the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-teal)] via-[var(--brand-cyan)] to-[var(--brand-blue)] drop-shadow-sm">backend</span> your product actually needs.
-              </SectionHeading>
-            </SlideUp>
-            
-            <SlideUp className="space-y-4 text-muted text-lg text-balance">
-              <p>
-                Synchro Solutions was founded on a simple premise: great software shouldn&apos;t be constrained by technical debt or bloated processes. We are a team of engineers, designers, and strategists who believe in building products that work flawlessly and scale effortlessly.
-              </p>
-              <p>
-                Whether you&apos;re a startup looking for an MVP or an enterprise needing a complex system overhaul, we bring a pragmatic, engineering-first approach to every challenge. No buzzwords, just solid architecture and beautiful design.
-              </p>
-            </SlideUp>
-          </StaggerContainer>
+        <StaggerContainer className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <SlideUp>
+            <div className="text-brand font-semibold tracking-wider text-sm uppercase mb-2">Why Us</div>
+            <SectionHeading>
+              Why Work With <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-teal)] via-[var(--brand-cyan)] to-[var(--brand-blue)] drop-shadow-sm">Synchro?</span>
+            </SectionHeading>
+          </SlideUp>
+        </StaggerContainer>
 
-          <div ref={containerRef} className="relative">
-            <div className="absolute left-[27px] top-[24px] bottom-[24px] w-0.5 bg-border hidden sm:block" />
-            <div 
-              className={cn(
-                "absolute left-[27px] top-[24px] bottom-[24px] w-0.5 bg-brand hidden sm:block origin-top transition-transform duration-1000 ease-out",
-                isInView ? "scale-y-100" : "scale-y-0"
-              )} 
-            />
-            
-            <div className="space-y-8 sm:space-y-12">
-              {STEPS.map((step) => (
-                <FadeIn key={step.id} className="relative flex items-start group" /* transition delay based on idx can be added */>
-                  <div className="flex-shrink-0 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-card border-2 border-border group-hover:border-brand transition-colors duration-300 mr-6">
-                    <step.icon className="w-6 h-6 text-muted group-hover:text-brand transition-colors duration-300" />
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {REASONS.map((reason, idx) => (
+            <SlideUp key={idx} className="h-full">
+              <div className="group relative flex flex-col h-full rounded-2xl bg-card p-8 transition-all hover:shadow-xl hover:-translate-y-1 shadow-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+                <div className="relative z-10 flex items-start gap-4">
+                  <div className="shrink-0 w-12 h-12 rounded-xl bg-alt-bg flex items-center justify-center text-muted-foreground group-hover:bg-brand/10 group-hover:text-brand transition-colors">
+                    <reason.icon className="w-6 h-6" />
                   </div>
-                  <div className="pt-3">
-                    <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
-                    <p className="text-muted">{step.desc}</p>
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground mb-2 leading-tight tracking-wider uppercase">{reason.title}</h3>
+                    <p className="text-muted text-sm leading-relaxed">{reason.desc}</p>
                   </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-          
-        </div>
+                </div>
+              </div>
+            </SlideUp>
+          ))}
+        </StaggerContainer>
       </div>
     </section>
   );

@@ -1,9 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { About } from "@/components/sections/About";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
-import { CTABanner } from "@/components/sections/CTABanner";
+import { BusinessProblem } from "@/components/sections/BusinessProblem";
+import { WhoWeHelp } from "@/components/sections/WhoWeHelp";
+import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { About } from "@/components/sections/About";
+import { HowWeWork } from "@/components/sections/HowWeWork";
 import { Contact } from "@/components/sections/Contact";
 
 const Hero = dynamic(() => import("@/components/sections/Hero").then(mod => mod.Hero), { ssr: false });
@@ -13,11 +16,19 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <div id="solutions">
+        <ServicesOverview />
+      </div>
+      <BusinessProblem />
+      <div id="who-we-help">
+        <WhoWeHelp />
+      </div>
+      <FeaturedProjects />
       <About />
-      <ServicesOverview />
+      <HowWeWork />
       <TechStackStrip />
-      <CTABanner />
       <Contact />
     </>
   );
 }
+

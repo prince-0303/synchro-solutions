@@ -1,0 +1,103 @@
+/Users/princeb/Documents/Synchro/synchro-solutions
+├── AGENTS.md
+├── CLAUDE.md
+├── README.md
+├── app
+|  ├── about
+|  |  └── page.tsx
+|  ├── actions
+|  |  └── contact.ts
+|  ├── api
+|  ├── contact
+|  |  └── page.tsx
+|  ├── globals.css
+|  ├── icon.png
+|  ├── layout.tsx
+|  ├── not-found.tsx
+|  ├── page.tsx
+|  ├── portfolio
+|  |  └── page.tsx
+|  ├── privacy-policy
+|  |  └── page.tsx
+|  ├── robots.ts
+|  ├── services
+|  |  ├── [service]
+|  |  |  └── page.tsx
+|  |  └── page.tsx
+|  ├── sitemap.ts
+|  └── terms-of-service
+|     └── page.tsx
+├── components
+|  ├── layout
+|  |  ├── BackgroundEffects.tsx
+|  |  ├── Footer.tsx
+|  |  ├── Header.tsx
+|  |  ├── MobileMenu.tsx
+|  |  ├── Navbar.tsx
+|  |  ├── SmoothScroller.tsx
+|  |  ├── ThemeProvider.tsx
+|  |  └── ThemeToggle.tsx
+|  ├── motion
+|  |  ├── FadeIn.tsx
+|  |  ├── ScrollReveal.tsx
+|  |  ├── SlideUp.tsx
+|  |  ├── StaggerContainer.tsx
+|  |  └── index.ts
+|  ├── projects
+|  ├── sections
+|  |  ├── About.tsx
+|  |  ├── CTABanner.tsx
+|  |  ├── Contact.tsx
+|  |  ├── FeaturedProjects.tsx
+|  |  ├── Hero.tsx
+|  |  ├── ServicesOverview.tsx
+|  |  ├── StatsBar.tsx
+|  |  └── TechStackStrip.tsx
+|  ├── services
+|  └── ui
+|     ├── AnimatedCounter.tsx
+|     ├── Badge.tsx
+|     ├── Button.tsx
+|     ├── Card.tsx
+|     ├── CustomCursor.tsx
+|     └── SectionHeading.tsx
+├── content
+|  ├── projects.ts
+|  ├── servicePages.ts
+|  ├── services.ts
+|  └── stats.ts
+├── docs
+|  └── 01-website-documentation.md
+├── eslint.config.mjs
+├── lib
+|  ├── constants.ts
+|  ├── hooks
+|  |  └── useActiveSection.ts
+|  ├── motionVariants.ts
+|  └── utils.ts
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+|  ├── file.svg
+|  ├── globe.svg
+|  ├── icons
+|  ├── images
+|  |  ├── logo
+|  |  |  ├── Synchro.png
+|  |  |  └── logo.png
+|  |  ├── og-image.png
+|  |  ├── projects
+|  |  └── team
+|  ├── next.svg
+|  ├── vercel.svg
+|  └── window.svg
+├── tsconfig.json
+├── tsconfig.tsbuildinfo
+└── types
+
+directory: 952 file: 6018
+
+ignored: directory (96)

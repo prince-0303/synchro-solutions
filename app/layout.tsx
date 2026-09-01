@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScroller } from "@/components/layout/SmoothScroller";
 import { BackgroundEffects } from "@/components/layout/BackgroundEffects";
+import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const spaceGrotesk = Space_Grotesk({
@@ -32,16 +33,16 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: "Custom Software Development Company | Web, Mobile & SaaS | Synchro Solutions",
+    default: "Synchro Solutions | Custom Software & Business Solutions in Kerala",
     template: "%s | Synchro Solutions"
   },
-  description: "Synchro Solutions builds custom web, mobile, SaaS and AI solutions for startups and businesses. We design and develop digital products built to scale.",
+  description: SITE_CONFIG.description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Synchro Solutions | Custom Software Development",
-    description: "Synchro Solutions builds custom web, mobile, SaaS and AI solutions for startups and businesses.",
+    title: "Synchro Solutions | Custom Software & Business Solutions in Kerala",
+    description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
     siteName: "Synchro Solutions",
     locale: "en_US",
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Synchro Solutions | Custom Software Development",
-    description: "Synchro Solutions builds custom web, mobile, SaaS and AI solutions for startups and businesses.",
+    title: "Synchro Solutions | Custom Software & Business Solutions in Kerala",
+    description: SITE_CONFIG.description,
   },
 };
 
@@ -104,9 +105,11 @@ export default function RootLayout({
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
+            <FloatingWhatsApp />
           </SmoothScroller>
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
