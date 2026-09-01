@@ -9,7 +9,6 @@ export function SlideUp({ children, className, delay }: { children: React.ReactN
       variants={delay ? {
         ...slideUp,
         visible: {
-          // @ts-expect-error - Framer Motion types are complex, dynamic merge works runtime
           ...slideUp.visible,
           transition: {
             // @ts-expect-error - Framer Motion types
